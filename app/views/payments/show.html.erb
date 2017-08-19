@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Bank ifsc code:</strong>
+  <%= @payment.bank_ifsc_code %>
+</p>
+
+<p>
+  <strong>Bank account number:</strong>
+  <%= @payment.bank_account_number %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @payment.amount %>
+</p>
+
+<p>
+  <strong>Merchant transaction ref:</strong>
+  <%= @payment.merchant_transaction_ref %>
+</p>
+
+<p>
+  <strong>Transaction date:</strong>
+  <%= @payment.transaction_date %>
+</p>
+
+<p>
+  <strong>Payment gateway merchant reference:</strong>
+  <%= @payment.payment_gateway_merchant_reference %>
+</p>
+
+<p>
+  <strong>Payload with sha:</strong>
+  <%= @payment.payload_with_sha %>
+</p>
+
+<p>
+  <strong>Payload to pg:</strong>
+  <%= @payment.payload_to_pg %>
+</p>
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>
