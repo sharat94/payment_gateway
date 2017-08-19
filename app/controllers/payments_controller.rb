@@ -25,7 +25,9 @@ class PaymentsController < ApplicationController
   # POST /payments.json
   def create
     @payment = Payment.new(payment_params)
-
+    @payment.merchant_transaction_ref= "txn001"
+    @payment.transaction_date= "#{Date.today}"
+    @payment.payment_gateway_merchant_reference= "merc001"
     respond_to do |format|
       if @payment.save
         format.html { redirect_to @payment, notice: 'Payment was successfully created.' }

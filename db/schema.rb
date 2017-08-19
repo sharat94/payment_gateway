@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170819054450) do
+ActiveRecord::Schema.define(version: 20170819091700) do
+
+  create_table "keys", force: :cascade do |t|
+    t.string   "main_key"
+    t.string   "main_iv"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "payments", force: :cascade do |t|
     t.string   "bank_ifsc_code"
@@ -24,6 +31,8 @@ ActiveRecord::Schema.define(version: 20170819054450) do
     t.string   "payload_to_pg"
     t.datetime "created_at",                         null: false
     t.datetime "updated_at",                         null: false
+    t.string   "status"
+    t.string   "message"
   end
 
 end

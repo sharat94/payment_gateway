@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  main_key: MyString
+  main_iv: MyString
+
+two:
+  main_key: MyString
+  main_iv: MyString
