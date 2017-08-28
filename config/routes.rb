@@ -1,6 +1,7 @@
 
 Rails.application.routes.draw do
   resources :payments
+  root to: "payments#new"
   namespace :api, defaults: { format: :json } do
     resources :payments  
     end
